@@ -1,0 +1,47 @@
+<import src="../../template/template.wxml"/>
+
+<view class="page">
+
+    <!--<block wx:for="{{dataList}}" wx:key="dataList">
+     <template is="modeTemp" data="{{item: item, type: type, windowWidth: windowWidth}}"></template>
+    </block>-->
+
+    <view class="container" wx:if="{{dataList.length}}">
+		 <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{dataList}}" wx:key="dataList">
+		  	<view class="content">
+		  		<view class="clearfix main-body clearfix">
+		  				<view class="f-l head-img_body">
+			  				<image src="{{item.replyUserHeadImg}}" class="img" catchtap="onShowPage" data-value="{{item.replyUserId}},{{item.replyUserName}}"/>
+			  			</view>
+			  			<view class="f-l news-content_body" style="width:{{windowWidth-180}}px">
+			  				<view class="title">{{item.replyUserName||""}}</view>
+				  			<view class="content_2" wx:if="{{type==0}}">
+				  				<navigator url="/pages/addcomment/addcomment?newsId={{item.newsId}}&pid={{item.replyCommentId}}&type=1&activeUserName={{item.replyUserName}}" hover-class="weui-cell_active">
+				  					<view wx:if="{{item.resType==1}}">{{item.replyContent||""}}</view>
+				  					<view wx:if="{{item.resType==2}}">回复<text class="resUserName">@ {{item.resUserName||""}}</text>{{item.replyContent||""}}</view>
+					  			</navigator>
+				  			</view>
+			  				<view class="content_2" wx:if="{{type==1}}">
+			  					<view wx:if="{{item.resType==1}}">赞了这条帖子</view>
+			  					<view wx:else >赞了<text class="resUserName">{{item.resUserName||""}}</text>的评论</view>
+			  				</view>
+			  				<view class="datetime">{{item.replyTime||""}}</view>
+			  			</view>
+			  			<view class="f-r news-img_body"  catchtap="onShowDetail" id="{{item.newsId||''}},1,1,0">
+			  				<image wx:if="{{item.resType==1}}" src="{{item.resImags||''}}" class="img"/>
+			            	<view wx:if="{{item.resType==2}}" class="article_content">{{item.resContent||""}}</view>
+			  			</view>
+		  			</view>
+		  	</view>
+		  	<view class="del" catchtap="onDeleteHandler" data-id="{{item.resType}}" id="{{item.replyCommentId||''}}">删除</view>
+		 </view>
+	</view>
+
+    <view class="none_data_body" wx:if="{{!dataList.length}}" style="top: 50%; margin-top: -100px; ">
+        <image src="/static/images/none_data.png" class="img"/>
+        <text class="text">暂无信息，赶紧去抢沙发吧~</text>
+    </view>
+
+    <view class="footer" wx:if="{{isBottom}}">————  我们都是有底线的  ————</view>
+
+</view>

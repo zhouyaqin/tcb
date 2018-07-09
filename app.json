@@ -1,0 +1,74 @@
+{
+  "debug": true,
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fffefc",
+    "navigationBarTitleText": "同城帮",
+    "backgroundColor": "#fffefc",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/releaseinfo/releaseinfo",
+    "pages/me/me",
+    "pages/mymsg/mymsg",
+    "pages/follow/follow",
+    "pages/region/region",
+    "pages/feedback/feedback",
+    "pages/comment/comment",
+    "pages/temp/temp",
+    "pages/withdrawals/withdrawals",
+    "pages/collection/collection",
+    "pages/news/news",
+    "pages/release/release",
+    "pages/page/page",
+    "pages/detail/detail",
+    "pages/system/system",
+    "pages/phone/phone",
+    "pages/income/income",
+    "pages/weather/weather",
+    "pages/partner/partner",
+    "pages/addcomment/addcomment",
+    "pages/instruct/instruct",
+    "pages/cashdetail/cashdetail"
+  ],
+  "networkTimeout": {
+    "connectSocket": 10000,
+    "request": 10000,
+    "downloadFile": 10000,
+    "uploadFile": 10000
+  },
+  "tabBar": {
+    "color": "#9fa0a5",
+    "selectedColor": "#ef7100",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "iconPath": "static/images/ico_52/1.png",
+        "selectedIconPath": "static/images/ico_86/logo.png",
+        "pagePath": "pages/index/index",
+        "text": "同城帮"
+      },
+      {
+        "iconPath": "static/images/ico_52/3.png",
+        "selectedIconPath": "static/images/ico_52/6.png",
+        "pagePath": "pages/news/news",
+        "text": "消息"
+      },
+      {
+        "iconPath": "static/images/ico_52/4.png",
+        "selectedIconPath": "static/images/ico_52/7.png",
+        "pagePath": "pages/release/release",
+        "text": "发布"
+      },
+      {
+        "iconPath": "static/images/ico_52/5.png",
+        "selectedIconPath": "static/images/ico_52/8.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  }
+}

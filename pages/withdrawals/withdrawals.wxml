@@ -1,0 +1,55 @@
+
+<view class="page">
+
+
+	<view class="withdrawal-body">
+		<view class="with-item clearfix">
+			<view class="f-l">收款方式</view>
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{wallet}}">
+			    <view class="f-l select-body">
+                    <view class="typeContent">{{wallet[index]}}<i class="jiao"></i></view> 
+                </view>
+			</picker>
+		</view>
+		<view class="with-item">
+			<view>提现金额</view>
+			<view class="moneyBody clearfix">
+				<text class="f-l money">￥</text>
+				<input type="number" value="" class="f-l input-text1" />
+			</view>
+			<view class="tip">可用余额3345.2元，提现金额必须是100的整数倍</view>
+		</view>
+	</view>
+    
+
+	<view class="content-body">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_44/10.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">
+                    <input type="number" class="input-text" placeholder="请输入手机号" />
+                </view>
+                <view class="weui-cell__ft">
+                    <button form-type="submit" class="btn_1">获取验证码</button>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_44/12.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">
+                    <input type="number" class="input-text" placeholder="验证码" />
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <button class="submit-btn" >提交</button>
+
+    
+</view>

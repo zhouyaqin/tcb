@@ -1,0 +1,36 @@
+
+<view class="page">
+
+    <view class="textarea-body">
+    	<image src="/static/images/ico_24/7.png" class="ico-textarea" />
+    	<textarea class="textarea-text" bindinput="getInputReason" focus="true" placeholder="{{placeholderText}}" placeholder-class="textarea-placeholder" />
+    </view>
+    
+    <view class="weui-cells">
+    	<view class="upload-tip">请添加图片</view>
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view class="weui-uploader">
+                    <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files" id="uploaderFiles">
+                            <block wx:for="{{files}}" wx:key="*this">
+                                <view class="weui-uploader__file" bindtap="imageHandler" id="{{item}}">
+                                    <image class="weui-uploader__img"  style="width: 75px; height: 75px;" src="{{item}}" mode="aspectFill" />
+                                </view>
+                            </block>
+                        </view>
+                        <view class="weui-uploader__input-box" wx:if="{{isChoose}}">
+                            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--<view class="small-tip">温馨小提示：长按可以删除图片哦！</view>-->
+
+	<button class="submit-btn {{isSubmit?'':'submit-btn__active'}}" disabled="{{isSubmit}}" bindtap="onFormSubmit" >提交</button>
+	
+	
+    
+</view>

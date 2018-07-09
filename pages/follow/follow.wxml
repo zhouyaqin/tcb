@@ -1,0 +1,30 @@
+
+<view class="page">
+ 
+
+    <block wx:for="{{attentList}}" wx:key="attentList" wx:if="{{attentList.length}}">
+        <navigator url="/pages/temp/temp?categoryId={{item.categoryId}}&categoryName={{item.categoryName}}" hover-class="weui-cell_active" class="navigator">
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                    <view class="weui-cell__hd">
+                        <image src="{{item.categoryIcon}}" class="img"></image>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view>{{item.categoryName}}</view>
+                        <!--<view class="weui-cell__bd_text">{{item.content}}</view>-->
+                    </view>
+                    <view class="weui-cell__ft  weui-cell__ft_in-access">
+                        <!--<text class="text">{{item.createTime}}</text>-->
+                        {{item.createTime}}
+                    </view>
+                </view>
+            </view>
+        </navigator>
+    </block>
+
+    <view class="none_data_body" wx:if="{{!attentList.length}}" style="top: 50%; margin-top: -100px; ">
+        <image src="/static/images/none_data.png" class="img"/>
+        <text class="text">暂无信息，赶紧去抢沙发吧~</text>
+    </view>
+
+</view>

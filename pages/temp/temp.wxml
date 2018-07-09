@@ -1,0 +1,29 @@
+<import src="../../template/template.wxml"/>
+
+<view class="page">
+
+	<view  class="head-body clearfix">
+		<view class="f-l">
+			<view class="title">#{{categoryName}}#</view>
+			<view class="content">
+				<text class="text">总阅读 {{readAmount}}</text>
+				<text class="text">讨论 {{commentAmount}}</text>
+			</view>
+		</view>
+		<button class="f-r follow-btn" wx:if="{{isAttent==0}}" bindtap="addAttent">+关注</button>
+		<button class="f-r follow-btn" wx:if="{{isAttent==1}}" bindtap="deleteAttent">取消关注</button>
+		
+	</view>
+
+    <block wx:for="{{dataList}}" wx:key="data" wx:if="{{dataList.length}}">
+      <template is="messageList" data="{{item: item}}"></template>
+    </block>
+
+    <view class="none_data_body" wx:if="{{!dataList.length}}" style="top: 50%; margin-top: -100px; ">
+        <image src="/static/images/none_data.png" class="img"/>
+        <text class="text">暂无信息，赶紧去抢沙发吧~</text>
+    </view>
+
+    <view class="footer" wx:if="{{isBottom}}">————  我们都是有底线的  ————</view>
+
+</view>

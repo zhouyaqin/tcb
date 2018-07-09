@@ -1,0 +1,30 @@
+
+<view class="page">
+    
+    <view class="income-body">
+    	<image src="/static/images/ico_money.png" class="money_img"/>
+    	<view class="amount-title">我的余额</view>
+    	<view class="amout">
+    		<i class="mark">￥</i>3345.23
+    	</view>
+    	<navigator url="/pages/withdrawals/withdrawals">
+    		<button class="btn-1">提现</button>
+    	</navigator>
+		<navigator url="/pages/cashdetail/cashdetail">
+			<view class="withdrawalsLog">提现记录<image src="/static/images/ico_24/16.png" class="ico"/></view>
+		</navigator>
+    </view>
+
+    <view class="income-body">
+    	<view class="clearfix">
+    		<text class="f-l">最近收益</text>
+    		<text class="f-r text_1">累计收益 41212 元</text>
+    	</view>
+    	<view class="wxChart">
+			<canvas disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler" canvas-id="myChart" style="width: {{windowWidth-40}}px; height: 210px;" class="myChart {{isData ? '' : 'hidden'}}"></canvas>
+			<view class="dataInfo {{isData ? 'hidden' : ''}}" style="height:210px; line-height:210px;">暂无数据</view>
+		</view>
+    </view>
+
+    
+</view>

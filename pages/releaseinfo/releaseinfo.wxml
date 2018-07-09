@@ -1,0 +1,122 @@
+
+<view class="page">
+
+    <view class="textarea-body">
+    	<image src="/static/images/ico_24/7.png" class="ico-textarea" />
+    	<textarea class="textarea-text" bindinput="getInputContent" focus="true"  placeholder="请输入发布的内容" placeholder-class="textarea-placeholder" />
+    </view>
+    
+    <view class="weui-cells">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view class="weui-uploader">
+                    <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files" id="uploaderFiles">
+                            <block wx:for="{{files}}" wx:key="*this">
+                                <view class="weui-uploader__file" bindtap="imageHandler">
+                                    <image class="weui-uploader__img"  style="width: 75px; height: 75px;" src="{{item}}" mode="aspectFill" />
+                                </view>
+                            </block>
+                        </view>
+                        <view class="weui-uploader__input-box">
+                            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--<view class="small-tip">温馨小提示：长按可以删除图片哦！</view>-->
+
+    <view class="content-body">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access" bindtap="chooseLocation">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_44/11.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">所在位置</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{locationName}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="content-body">
+        <view class="weui-cells weui-cells_after-title" wx:if="{{isVeriAuth}}">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_44/10.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">
+                    <input type="number" value="{{telephone}}"  maxlength="11" class="input-text" bindinput="getInputPhone" placeholder="请输入联系方式" />
+                </view>
+                <view class="weui-cell__ft">
+                    <button class="btn_1 {{isDisabled?'':'active'}}" bindtap="getAuthCode" disabled="{{isDisabled}}">{{codeText}}</button>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells weui-cells_after-title" wx:if="{{!isVeriAuth}}">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_44/10.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">
+                    <input type="number" value="{{telephone}}" bindinput="getInputPhone" maxlength="11" placeholder="请输入联系方式" class="input-text"/>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells weui-cells_after-title" wx:if="{{isVeriAuth}}">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_44/12.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">
+                    <input type="number" class="input-text" maxlength="4" bindinput="getInputCode" placeholder="验证码" />
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="content-body">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">我要置顶</view>
+                <view class="weui-cell__ft">
+                    <switch checked="{{isTop}}" bindchange="switchChange"/>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title" wx:if="{{isTop}}">
+            <picker bindchange="bindPickerChange" value="{{daysIndex}}" range="{{daysArr}}"  range-key="period">
+                <view class="weui-cell weui-cell_access">
+                    <view class="weui-cell__bd">选择置顶时间</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access">{{days}}天</view>
+                </view>
+           </picker>
+        </view>
+        <view class="weui-cells weui-cells_after-title" wx:if="{{isTop}}">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">价格</view>
+                <view class="weui-cell__ft"><text class="main-c">{{cost}}元</text></view>
+            </view>
+        </view>
+    </view>
+
+    <view class="content-body">
+        <view wx:if="{{remainNum==0}}" class="tip-body clearfix">
+            <view class="f-l tip">您今日免费发布次数已用光, 发帖: {{newsCost}}元/条</view>
+            <view class="f-r total">合计: <text class="tip-body_active">{{totalFee||0}}元</text></view>
+        </view>
+
+        <view class="disclaimer clearfix">
+            <!--<image src="/static/images/ico_24/12.png" class="f-l ico-img" />-->
+            免责声明：平台只提供信息发布与展示，信息的沟通与结果与平台无关，平台不负任何责任，发布信息请遵守相关法律法规及平台规定！
+        </view>
+    </view>
+
+	<button class="submit-btn {{isSubmit?'':'submit-btn__active'}}" disabled="{{isSubmit}}" bindtap="releaseNews" >提交</button>
+	
+	
+    
+</view>

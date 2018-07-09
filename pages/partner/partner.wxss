@@ -1,0 +1,71 @@
+
+
+
+.weui-cell::after,
+.weui-cells::after{
+	border-bottom:1rpx solid #f1f2f6
+}
+
+.weui-cell::before,
+.weui-cells::before{
+	border: none;
+}
+
+.weui-cell__hd,
+.input-placeholder{
+	color: #363638;
+}
+
+.weui-cell__hd .img{
+	margin-right: 5px;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+}
+
+.weui-cell__bd{
+	padding-left: 5px;
+	font-size: 14px;
+}
+
+.weui-cell__ft{
+	font-size: 14px;
+}
+
+.input-text{
+	padding-right: 15px;
+	color: #363638;
+}
+
+.submit-btn{
+	margin: 80px 40px 20px 40px;
+	color: #ffffff;
+	background: #b1b4bd;
+}
+
+.active{
+	background: #ef7100;
+}
+
+.textarea-body{
+	position: relative;
+	padding: 12px 20px 12px 45px;
+	border-bottom: 1px solid #f1f2f6;
+}
+
+.ico-textarea{
+	position: absolute;
+	top: 14px;
+	left: 20px;
+	width: 16px;
+	height: 16px;
+}
+
+.textarea-text{
+	width: 100%;
+}
+
+.textarea-placeholder{
+	margin-top: 3px;
+	color: #cacbcf;
+}

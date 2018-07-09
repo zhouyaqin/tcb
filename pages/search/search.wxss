@@ -1,0 +1,21 @@
+@import "../../libs/wxParse/wxParse.wxss";
+
+.weui-search-bar{
+	border-top: 1px solid #f1f2f6;
+	border-bottom: 1px solid #f1f2f6;
+	background-color: #ffffff;
+}
+
+.weui-search-bar__form,
+.weui-search-bar__label{
+	background: #eff0f2;
+	border: none;
+}
+
+.weui-icon-search {
+	vertical-align: -3px;
+}
+
+.weui-icon-search_in-box{
+	top: 8px;
+}

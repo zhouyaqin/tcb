@@ -1,0 +1,36 @@
+
+
+
+.tip_body{
+	padding: 30rpx;
+	font-size: 14px;
+	color: #6c88c1;
+	text-align: center;
+}
+
+.classify_body{
+	position: relative;
+	padding: 20rpx 0;
+	width: 100%;
+}
+
+.classify_body .item{
+	margin-bottom: 60rpx;
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+.classify_body .item .img{
+	width: 90rpx;
+	height: 90rpx;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.classify_body .item .text{
+    padding-top: 15rpx;
+	display: block;
+	font-size: 14px;
+	color: #363638;
+}

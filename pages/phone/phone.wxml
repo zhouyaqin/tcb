@@ -1,0 +1,35 @@
+
+<view class="page">
+    
+	<view class="content-body">
+		<view class="weui-cells weui-cells_after-title">
+			<view class="weui-cell weui-cell_access">
+		        <view class="weui-cell__hd">
+		            <image src="/static/images/ico_44/10.png" class="img"></image>
+		        </view>
+		        <view class="weui-cell__bd">
+		        	<input type="number" class="input-text" bindinput="getInputPhone" placeholder="请输入新手机号" maxlength="11" />
+		        </view>
+		        <view class="weui-cell__ft">
+                    <button class="btn_1 {{isDisabled?'':'active'}}" bindtap="getAuthCode" disabled="{{isDisabled}}">{{codeText}}</button>
+                </view>
+		    </view>
+	    </view>
+
+	    <view class="weui-cells weui-cells_after-title">
+	        <view class="weui-cell weui-cell_access">
+		        <view class="weui-cell__hd">
+		            <image src="/static/images/ico_44/12.png" class="img"></image>
+		        </view>
+		        <view class="weui-cell__bd">
+		        	<input type="number" class="input-text" maxlength="4" bindinput="getInputCode" placeholder="验证码" />
+		        </view>
+		    </view>
+	    </view>
+	</view>
+
+	<button class="submit-btn {{isSubmit?'':'submit-btn__active'}}" disabled="{{isSubmit}}" bindtap="onUpdatePhone" >确定</button>
+	
+	
+    
+</view>

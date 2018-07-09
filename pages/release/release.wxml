@@ -1,0 +1,15 @@
+
+<view class="page">
+  	
+	<view class="tip_body">请你选择要发布的分类</view>
+
+	<view class="classify_body">
+		<view class="item" wx:for="{{classifyList}}" wx:key="classify">
+			<navigator url="/pages/releaseinfo/releaseinfo?categoryId={{item.id}}&categoryName={{item.name}}" hover-class="weui-cell_active">
+				<image src="{{item.icon}}" class="img"/>
+				<text class="text">{{item.name}}</text>
+			</navigator>
+		</view>
+	</view>
+
+</view>

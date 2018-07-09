@@ -1,0 +1,70 @@
+
+
+.income-body{
+	position: relative;
+	padding: 20px;
+	border-bottom: 2px solid #f1f2f6;
+	text-align: center;
+}
+
+.income-body .money_img{
+	padding-bottom: 15px;
+	width: 180rpx;
+	height: 190rpx;
+}
+
+.income-body .amount-title{
+	font-size: 16px;
+	color: #363638;
+}
+
+.income-body .amout{
+	font-size: 32px;
+	color: #000;
+	font-weight: bold;
+}
+
+.income-body .amout .mark{
+	display: inline-block;
+	padding: 0 5px; 
+	font-size: 21px;
+}
+
+.income-body .withdrawalsLog{
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #6b88c0;
+	padding-left: 15px;
+}
+
+.income-body .withdrawalsLog .ico{
+	padding-left: 8px;
+	width: 22rpx;
+	height: 22rpx;
+}
+
+.btn-1{
+	margin: 20px 20px 10px 20px;
+	background: #ef7100;
+	color: #ffffff;
+	border: none;
+	font-size: 16px;
+}
+
+.text_1{
+	color: #b2b5bc;
+	font-size: 12px;
+}
+
+.wxChart {
+	position: relative;
+	width: 100%;
+	padding: 15px 0;
+}
+
+.dataInfo {
+	width: 100%;
+	text-align:center;
+  color: #7f8f99;
+}

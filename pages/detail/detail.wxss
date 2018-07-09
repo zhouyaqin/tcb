@@ -1,0 +1,77 @@
+
+
+.page{
+	position: relative;
+	width: 100%;
+	padding-bottom: 60px;
+}
+
+
+.tabar-footer{
+	z-index: 999;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	box-shadow: 5px 0px 10px rgba(200, 200, 200, .5);
+	background: #ffffff;
+}
+
+.tabar-footer .bar-item,
+.tabar-footer .bar-item1{
+	position: relative;
+	float: left;
+	text-align: center;
+}
+
+.tabar-footer .bar-item{
+	width: 18%;
+}
+
+.tabar-footer .bar-item1{
+	width: 28%;
+}
+
+.tabar-footer .bar-item .img{
+	padding-top: 10px;
+	width: 28px;
+	height: 28px;
+	vertical-align: middle;
+}
+
+.tabar-footer .bar-item .text{
+	display: block;
+	color: #a0a1a6;
+	font-size: 12px;
+}
+
+.tabar-footer .bar-item .active{
+	display: block;
+	color: #ef7100;
+	font-size: 12px;
+}
+
+.tabar-footer .bar-item1 .contact{
+	background: #ef7100;
+	line-height: 60px;
+	color: #ffffff;
+}
+
+.tabar-footer .bar-item .shareBtn{
+    display: inline-block;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    color: #8f8f8f;
+    height: 60px;
+    line-height: 1.1em;
+}
+
+.tabar-footer .bar-item button::after{
+    border: none;
+}
+
+button.button-hover{
+	color: #ef7100;
+}

@@ -1,0 +1,99 @@
+
+.weui-cell::after,
+.weui-cells::after{
+	border-bottom:1rpx solid #f1f2f6
+}
+
+.weui-cell::before,
+.weui-cells::before{
+	border: none;
+}
+
+.weui-cell__hd .img{
+	margin-right: 5px;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+}
+
+.weui-cell__bd{
+	padding-left: 5px;
+	font-size: 14px;
+	color: #363638;
+}
+
+
+
+.head-container{
+	position: relative;
+	width: 100%;
+}
+
+.header{
+	position: relative;
+	padding: 30rpx 40rpx;
+	background: #ffffff;
+	border-bottom: 1px solid #f1f1f1;
+	text-align: center;
+}
+
+.header .img{
+	width: 150rpx;
+	height: 150rpx;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+.container__1{
+
+}
+
+.ico-phone{
+	margin: 0 15rpx;
+	width: 50rpx;
+	height: 38rpx;
+	vertical-align: -3px;
+}
+
+.nickName{
+	padding: 15rpx 15rpx 0 15rpx;
+	font-size: 18px;
+	color: #ef7100;
+}
+
+.creditValue{
+	font-size: 12px;
+	color: #6c88c1;
+}
+
+.phone-body{
+	display: inline;
+}
+
+.phone{
+	padding: 0 10rpx;
+	font-size: 14px;
+	height: 60rpx;
+	line-height: 60rpx;
+	color: #363638;
+}
+
+.phone .text{
+	padding: 0 10rpx;
+	font-size: 14px;
+	height: 60rpx;
+	line-height: 60rpx;
+	color: #363638;
+}
+
+.phone .text1{
+	vertical-align: 2px;
+	display: inline-block;
+	padding: 0 10rpx;
+	font-size: 12px;
+	height: 30rpx;
+	line-height: 30rpx;
+	color: #6c88c1;
+	border: 1px solid #6c88c1;
+	border-radius: 3px;
+}

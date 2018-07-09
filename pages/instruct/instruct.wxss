@@ -1,0 +1,17 @@
+
+
+.main-body{
+	position: relative;
+	padding: 15px;
+}
+
+.main-body .title{
+	line-height: 32px;
+	font-weight: bold;
+	color: #363638;
+}
+
+.main-body .content{
+	line-height: 1.8em;
+	color: #999;
+}

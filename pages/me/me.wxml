@@ -1,0 +1,71 @@
+
+<view class="page">
+
+	<view class="head-container">
+        <view class="header clearfix">
+            <image src="{{userInfo.headImage}}" class="img"/>
+            <view class="nickName">{{userInfo.nickName||""}}</view>
+            <view class="creditValue">信用值{{userInfo.trustValue||0}}分</view>
+            <view class="phone">
+                <text class="text" wx:if="{{userInfo.telephone!=''}}">手机：<text style="font-size: 16px;">{{userInfo.telephone}}</text></text>
+                <navigator wx:else url="/pages/phone/phone" class="phone-body" hover-class="weui-cell_active"><text class="text1">未绑定</text></navigator>
+                <navigator url="/pages/phone/phone" class="phone-body" hover-class="weui-cell_active">
+                    <image src="/static/images/ico_44/13.png" class="ico-phone"/>
+                </navigator>
+            </view>
+        </view>
+    </view>
+  
+    <view class="container__1">
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="/pages/mymsg/mymsg" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_52/14.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">我的发帖</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="/pages/collection/collection" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_52/13.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">我的收藏</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="/pages/feedback/feedback?type=1" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_52/12.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">建议反馈</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="/pages/instruct/instruct" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_52/11.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">使用说明</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+
+        <view class="weui-cells weui-cells_after-title" wx:if="{{isParter}}">
+            <navigator url="/pages/income/income" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/static/images/ico_52/10.png" class="img"></image>
+                </view>
+                <view class="weui-cell__bd">收益管理</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+    </view>
+
+</view>

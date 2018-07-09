@@ -1,0 +1,110 @@
+
+
+
+
+.weui-cell::after,
+.weui-cells::after{
+	border-bottom:1rpx solid #f1f2f6
+}
+
+.weui-cell::before,
+.weui-cells::before{
+	border: none;
+}
+
+.weui-cell__bd{
+	padding-left: 5px;
+	font-size: 14px;
+	color: #363638;
+}
+
+.weui-cell__ft{
+	color: #363638;
+}
+
+.weui-cell__hd .img{
+	margin-right: 5px;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+}
+
+.content-body{
+	border-top: 5px solid #f1f2f6;
+}
+
+.btn_1{
+	width: 100px;
+	border: 1px solid #ef7100;
+	font-size: 12px;
+	background: #ffffff;
+	color: #ef7100;
+}
+
+.submit-btn{
+	margin: 40px;
+	background: #ef7100;
+	color: #ffffff;
+}
+
+
+.withdrawal-body{
+	position: relative;
+	padding: 20px 30px 0 30px;
+}
+
+.withdrawal-body .with-item{
+	padding: 8px 0;
+}
+
+.withdrawal-body .moneyBody{
+	padding: 15px 0;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #f1f2f6;
+}
+
+.withdrawal-body .moneyBody .money{
+	padding-right: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.withdrawal-body .moneyBody .input-text1{
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+}
+
+
+.withdrawal-body .tip{
+	padding: 8px 0;
+	font-size: 12px;
+	color: #b1b4bb;
+}
+
+.select-body{
+	width: 200px;
+	padding: 0 20px;
+	color: #6b88c0;
+}
+
+.typeContent{
+	position: relative;
+	display: inline-block;
+	padding-right: 30px;
+}
+
+.jiao{
+  z-index: 10;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 4px;
+  height: 0px;
+  width: 0px;
+  border-top: 6px solid #6b88c0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}

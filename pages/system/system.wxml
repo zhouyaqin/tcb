@@ -1,0 +1,49 @@
+<import src="../../template/template.wxml"/>
+
+<view class="page">
+ 
+    <view class="weui-cells weui-cells_after-title" bindtap="onPunishMsg">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="/static/images/ico_68/5.png" class="img"></image>
+            </view>
+            <view class="weui-cell__bd">
+            	<view>用户处罚通知</view>
+            	<view class="weui-cell__bd_text">{{punishMsg.content||''}}</view>
+            </view>
+            <view class="weui-cell__ft"><text class="text">{{punishMsg.createTime||''}}</text></view>
+        </view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title" bindtap="onInformMsg">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="/static/images/ico_68/6.png" class="img"></image>
+            </view>
+            <view class="weui-cell__bd">
+                <view>举报他人</view>
+                <view class="weui-cell__bd_text">{{informMsg .content||''}}</view>
+            </view>
+            <view class="weui-cell__ft"><text class="text">{{informMsg .createTime||''}}</text></view>
+        </view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title" bindtap="onFeedbackMsg">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="/static/images/ico_68/7.png" class="img"></image>
+            </view>
+            <view class="weui-cell__bd">
+                <view>建议反馈</view>
+                <view class="weui-cell__bd_text">{{feedbackMsg.content||''}}</view>
+            </view>
+            <view class="weui-cell__ft"><text class="text">{{feedbackMsg.createTime||''}}</text></view>
+        </view>
+    </view>
+
+
+    <block wx:if="{{isUseTemp}}">
+      <template is="noticeTemp" data="{{item: noticeDetail}}"></template>
+    </block>
+
+</view>

@@ -1,0 +1,59 @@
+
+<view class="page">
+
+    <view class="weather-container">
+        <view class="weather-box">
+            <view class="weather-body">
+                <view class="weather-c1 clearfix">
+                    <view class="f-l wearth">{{weather.daytemp||0}}°</view>
+                    <image src="{{weather.dayweatherIcon}}" class="f-l weath-ico"/>
+                </view>
+                <view class="weather-c2 clearfix">
+                    <text class="mr-10">{{weather.city||'龙华新区'}}</text>
+                    <text>{{weather.day||'今天'}}</text>
+                </view>
+                <view class="weather-c3 clearfix">
+                    <view class="f-l item">
+                        <text class="p1">{{weather.dayweather||'晴'}}</text>
+                        <text class="p2">天气状况</text>
+                    </view>
+                    <view class="f-l line">|</view>
+                    <view class="f-l item">
+                        <text class="p1">{{weather.nighttemp||0}}°/{{weather.daytemp||0}}°</text>
+                        <text class="p2">温度</text>
+                    </view>
+                    <view class="f-l line">|</view>
+                    <view class="f-l item">
+                        <text class="p1">{{weather.daywind||'无风向'}}</text>
+                        <text class="p2">风向</text>
+                    </view>
+                </view>
+            </view>
+            <image src="/static/images/bg.png" class="weather-img"/>
+        </view>
+
+        <view class="weather-foot clearfix">
+            <view class="weather-items" id="0" bindtap="onChangeWeather">
+                <view class="t1">{{todayWeather.nighttemp||0}}°/{{todayWeather.daytemp||0}}°</view>
+                <image src="{{todayWeather.dayweatherIcon}}" class="icon"/>
+                <view class="b1">今天</view>
+            </view>
+            <view class="weather-items" id="1" bindtap="onChangeWeather">
+                <view class="t1">{{oneWeather.nighttemp||0}}°/{{oneWeather.daytemp||0}}°</view>
+                <image src="{{oneWeather.dayweatherIcon}}" class="icon"/>
+                <view class="b1">明天</view>
+            </view>
+            <view class="weather-items" id="2" bindtap="onChangeWeather">
+                <view class="t1">{{twoWeather.nighttemp||0}}°/{{twoWeather.daytemp||0}}°</view>
+                <image src="{{twoWeather.dayweatherIcon}}" class="icon"/>
+                <view class="b1">后天</view>
+            </view>
+            <view class="weather-items" id="3" bindtap="onChangeWeather">
+                <view class="t1">{{threeWeather.nighttemp||0}}°/{{threeWeather.daytemp||0}}°</view>
+                <image src="{{threeWeather.dayweatherIcon}}" class="icon"/>
+                <view class="b1">{{threeWeather.weekText}}</view>
+            </view>
+        </view>
+    </view>
+
+</view>

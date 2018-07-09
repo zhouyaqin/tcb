@@ -1,0 +1,53 @@
+
+<view class="page">
+ 
+
+	<view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/comment/comment?type=0" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="/static/images/ico_68/1.png" class="img"></image>
+            </view>
+            <view class="weui-cell__bd">评论</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">
+            	<i class="weui-badge" wx:if="{{commentAmount!=0}}">{{commentAmount}}</i>
+            </view>
+        </navigator>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/comment/comment?type=1" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="/static/images/ico_68/2.png" class="img"></image>
+            </view>
+            <view class="weui-cell__bd">赞</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"><i class="weui-badge" wx:if="{{likeAmount!=0}}">{{likeAmount}}</i></view>
+        </navigator>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/follow/follow" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="/static/images/ico_68/3.png" class="img"></image>
+            </view>
+            <view class="weui-cell__bd">
+            	<view>关注消息</view>
+            	<!--<view class="weui-cell__bd_text">材料商城：每个女人都要一条小黑裙，和小黑裙还和小黑裙还</view>-->
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">
+                <i class="weui-badge" wx:if="{{attenAmount!=0}}">{{attenAmount}}</i>
+            </view>
+            <!--<text class="text">1-29</text>-->
+        </navigator>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/system/system" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="/static/images/ico_68/4.png" class="img"></image>
+            </view>
+            <view class="weui-cell__bd">系统消息</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"><i class="weui-badge" wx:if="{{sysAmount!=0}}">{{sysAmount}}</i></view>
+        </navigator>
+    </view>
+
+</view>

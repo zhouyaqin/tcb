@@ -1,0 +1,13 @@
+
+<view class="page">
+
+    <view class="textarea-body">
+    	<image src="/static/images/ico_24/7.png" class="ico-textarea" />
+    	<textarea class="textarea-text" bindinput="getInputContent" focus="true" placeholder="{{placeholderText}}" placeholder-class="textarea-placeholder" />
+    </view>
+
+	<button class="submit-btn {{isSubmit?'':'submit-btn__active'}}" disabled="{{isSubmit}}" bindtap="onFormSubmit" >提交</button>
+	
+	
+    
+</view>

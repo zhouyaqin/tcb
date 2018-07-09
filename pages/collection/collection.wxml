@@ -1,0 +1,16 @@
+<import src="../../template/template.wxml"/>
+
+<view class="page">
+
+    <block wx:for="{{collectList}}" wx:key="collectList" wx:if="{{collectList.length}}">
+     <template is="messageList" data="{{item: item}}"></template>
+    </block>
+
+    <view class="none_data_body" wx:if="{{!collectList.length}}" style="top: 50%; margin-top: -100px; ">
+        <image src="/static/images/none_data.png" class="img"/>
+        <text class="text">暂无信息，赶紧去抢沙发吧~</text>
+    </view>
+
+    <view class="footer" wx:if="{{isBottom}}">————  我们都是有底线的  ————</view>
+
+</view>

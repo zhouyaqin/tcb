@@ -1,0 +1,90 @@
+
+.weui-search-bar{
+	width: 100%;
+	background: #ffffff;
+	border: none;
+}
+
+.weui-search-bar__form{
+	border: none;
+	line-height: 32px;
+	height: 32px;
+	background: #eff0f2;
+	font-size: 12px;
+}
+
+.input-text{
+	line-height: 32px;
+	height: 32px;
+	color: #b1b4bb;
+}
+
+.weui-icon-search_in-box{
+	top: 7px;
+}
+
+.weui-search-bar__input{
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+}
+
+.current_position{
+	padding: 0 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #363638;
+}
+
+
+.nav-body{
+	position: relative;
+	margin: 0 15px;
+	height: 100rpx;
+	width: 100%;
+	background: #ffffff;
+	border-bottom: 1px solid #f1f2f6;
+}
+
+.nav-body .item_view{
+	position: relative;
+	float: left;
+	width: 33.333%;
+}
+
+.nav-body .item_view .title{
+	position: relative;
+	display: block;
+	height: 100rpx;
+	line-height: 100rpx;
+	color: #363638;
+}
+
+.nav-body .item_view .active{
+	color: #ef7100;
+}
+
+
+.nav-body .item_view .line{
+	position: absolute;
+	width: 30px;
+	height: 2px;
+	background: #ef7100;
+}
+
+.nav-body .item_view .line1{
+	bottom: 8px;
+	left: 3px;
+}
+
+.region-list{
+	padding: 0 15px;
+}
+
+.region-list .region-item{
+	line-height: 50px;
+	height: 50px;
+	font-size: 14px;
+	color: #363638;
+	border-bottom: 1px solid #f1f2f6;
+}

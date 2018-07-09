@@ -1,0 +1,52 @@
+<import src="../../template/template.wxml"/>
+
+<view class="page">
+
+     <view style="position: relative;">
+           <view wx:if="{{detailList.length}}">
+            <block wx:for="{{detailList}}" wx:key="detailList">
+                  <template is="detail" data="{{item: item, type: type}}"></template>
+             </block>
+             <view class="comment-body">
+               <view class="comment-tip">全部评论 ({{commentLength}})</view>
+               <block wx:for="{{comment}}" wx:key="comment" wx:if="{{comment.length>0}}">
+                   <template is="commentList" data="{{item: item, newsId: id}}"></template>
+               </block>
+             </view>
+          </view>
+          <view class="none_data_body" wx:if="{{!detailList.length}}" style="top: 200px;">
+            <image src="/static/images/none_data.png" class="img"/>
+            <text class="text">暂无信息，赶紧去抢沙发吧~</text>
+          </view>
+     </view>
+
+
+     <view class="tabar-footer clearfix" wx:if="{{type==1}}">
+     	 <view class="bar-item">
+     	 	<image src="{{isLiked==1?'/static/images/ico_44/4.png':'/static/images/ico_44/8.png'}}" class="img"  bindtap="onAddLike" id="1" data-value="{{id}}"/>
+     	 	<text class="text {{isLiked==1?'active':''}}">{{isLiked==1?'已赞':'点赞'}}</text>
+     	 </view>
+     	 <view class="bar-item">
+            <navigator url="/pages/addcomment/addcomment?newsId={{id}}&pid=0&type=1" hover-class="weui-cell_active">
+          	 	<image src="{{isComment==1?'/static/images/ico_44/3.png':'/static/images/ico_44/7.png'}}" class="img"/>
+          	 	<text class="text">评论</text>
+            </navigator>
+     	 </view>
+     	 <view class="bar-item">
+            <button class="shareBtn" open-type="share" hover-class="button-hover">
+     	 	    <image src="{{isShared==1?'/static/images/ico_44/2.png':'/static/images/ico_44/6.png'}}" class="img"/>
+     	 	    <text class="text">分享</text>
+            </button>
+     	 </view>
+     	 <view class="bar-item">
+     	 	<image src="{{isCollected==1?'/static/images/ico_44/1.png':'/static/images/ico_44/5.png'}}" bindtap="onAddCollection" class="img" data-value="{{id}}"/>
+     	 	<text class="text {{isCollected==1?'active':''}}">收藏</text>
+     	 </view>
+     	 <view class="bar-item1">
+     	 	<view class="contact" bindtap="makePhoneCall" data-value="{{detail.telephone}}">联系Ta</view>
+     	 </view>
+     </view>
+
+
+
+</view>

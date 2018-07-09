@@ -1,0 +1,56 @@
+
+
+
+.weui-cell::after,
+.weui-cells::after{
+	border-bottom:1rpx solid #f1f2f6
+}
+
+.weui-cell::before,
+.weui-cells::before{
+	border: none;
+}
+
+.weui-cell__hd .img{
+	margin-right: 5px;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+}
+
+.weui-cell__bd{
+	padding-left: 5px;
+	font-size: 14px;
+	color: #363638;
+}
+
+.content-body{
+	border-bottom: 5px solid #f1f2f6;
+}
+
+.input-text{
+	padding: 0 15px;
+	color: #b0b3ba;
+}
+
+.btn_1{
+	width: 120px;
+	font-size: 12px;
+	background: #ffffff;
+	color: #ef7100;
+}
+
+.active{
+	border: 1px solid #ef7100;
+}
+
+.submit-btn{
+	margin: 80px 40px 20px 40px;
+	background: #b1b4bd;
+	color: #ffffff;
+}
+
+.submit-btn__active{
+	background: #ef7100;
+}
+

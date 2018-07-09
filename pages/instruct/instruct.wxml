@@ -1,0 +1,18 @@
+
+<view class="page">
+
+    <view class="main-body">
+        <view class="title">1、如何发帖？</view>
+        <view class="content">首先，选择所要发帖的模块，进入发布页面，填写内容和上传图片等信息，填写真实的信息，提交发布信息即可。</view>
+
+        <view class="title">2、如何查看发帖？</view>
+        <view class="content">首先，选择所要发帖的模块，进入发布页面，填写内容和上传图片等信息，填写真实的信息，提交发布信息即可。</view>
+
+        <view class="title">3、如何提现？</view>
+        <view class="content">首先，选择所要发帖的模块，进入发布页面，填写内容和上传图片等信息，填写真实的信息，提交发布信息即可。</view>
+
+        <view class="title">4、如何查看提现记录？</view>
+        <view class="content">首先，选择所要发帖的模块，进入发布页面，填写内容和上传图片等信息，填写真实的信息，提交发布信息即可。</view>
+    </view>
+
+</view>

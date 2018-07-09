@@ -1,0 +1,71 @@
+
+
+
+.weui-cell::after,
+.weui-cells::after{
+	border-bottom:1rpx solid #f1f2f6
+}
+
+.weui-cell::before,
+.weui-cells::before{
+	border: none;
+}
+
+.weui-cells{
+	margin-top: 10px;
+}
+
+.weui-cell{
+	padding: 10px;
+}
+
+.input-text{
+	padding-right: 15px;
+	color: #363638;
+}
+
+.submit-btn{
+	margin: 20px 40px 80px 40px;
+	background: #b1b4bd;
+	color: #ffffff;
+}
+
+.submit-btn__active{
+	background: #ef7100;
+}
+
+.textarea-body{
+	position: relative;
+	padding: 0 20px 12px 45px;
+	border-bottom: 1px solid #f1f2f6;
+}
+
+.ico-textarea{
+	position: absolute;
+	top: 12px;
+	left: 20px;
+	width: 16px;
+	height: 16px;
+}
+
+.textarea-text{
+	padding-top: 10px;
+	width: 100%;
+}
+
+.textarea-placeholder{
+	color: #cacbcf;
+}
+
+
+.upload-tip{
+	padding-left: 10px;
+	color: #c9cace;
+	font-size: 14px;
+}
+
+.small-tip{
+	padding: 10rpx 20rpx;
+	color: #c9cace;
+	font-size: 12px;
+}

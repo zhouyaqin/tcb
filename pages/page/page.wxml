@@ -1,0 +1,49 @@
+<import src="../../template/template.wxml"/>
+
+<view class="page">
+	
+	<view class="page-box">
+		<view class="header clearfix">
+			<image src="{{userInfo.headImage||'/static/images/ico_86/11.png'}}" class="img"/>
+	        <view class="nickName">{{userInfo.name||''}}</view>
+	        <view class="creditValue">信用值{{userInfo.trustValue||0}}分</view>
+		</view>
+		<view class="sub-content clearfix">
+				<view class="items">
+					<text class="dl_text">发帖数</text>
+					<text class="dl_number">{{userInfo.newsAmount||0}}</text>
+				</view>
+				<view class="items">
+					<text class="dl_text">总浏览</text>
+					<text class="dl_number">{{userInfo.readAmount||0}}</text>
+				</view>
+				<view class="items">
+					<text class="dl_text">被赞</text>
+					<text class="dl_number">{{userInfo.likeAmount||0}}</text>
+				</view>
+				<view class="items">
+					<text class="dl_text">评论</text>
+					<text class="dl_number">{{userInfo.commentAmount||0}}</text>
+				</view>
+				<view class="items">
+					<text class="dl_text">收藏</text>
+					<text class="dl_number">{{userInfo.collectAmount||0}}</text>
+				</view>
+			</view>
+	</view>
+
+
+	<view class="p-r">
+	    <block wx:for="{{userInfoList}}" wx:key="data"  wx:if="{{userInfoList.length}}">
+	     <template is="messageList" data="{{item: item}}"></template>
+	    </block>
+	    
+	    <view class="none_data_body" wx:if="{{!userInfoList.length}}" style="top: 50px;">
+	        <image src="/static/images/none_data.png" class="img"/>
+	        <text class="text">暂无信息，赶紧去抢沙发吧~</text>
+	    </view>
+	</view>
+
+    <view class="footer" wx:if="{{isBottom}}">————  我们都是有底线的  ————</view>
+
+</view>

@@ -1,0 +1,17 @@
+
+<view class="page">
+    
+
+    <view class="weui-cells weui-cells_after-title" wx:for="{{cashDetailList}}" wx:key="{{cashDetailList}}">
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view>{{item.mode}}</view>
+                <view class="weui-cell__bd_text">{{item.dateTime}}</view>
+            </view>
+            <view class="weui-cell__ft">
+                <text>{{item.amount}}</text>
+            </view>
+        </view>
+    </view>
+
+</view>
